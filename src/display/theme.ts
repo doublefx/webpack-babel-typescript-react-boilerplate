@@ -1,5 +1,5 @@
 const theme = {
-  boilerplateTestComponentColor: "#eee",
+  testComponentColor: "#eee",
 };
 
 export type Theme = typeof theme;

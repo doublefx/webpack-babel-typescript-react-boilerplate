@@ -26,10 +26,12 @@ module.exports = {
     // default exports. Setting this to match expected TypeScript behavior.
     ["@babel/plugin-transform-modules-commonjs", { noInterop: true }],
 
+	  ["@babel/plugin-proposal-pipeline-operator"],
+
     // https://www.styled-components.com/docs/tooling#better-debugging
-    "babel-plugin-styled-components",
+	  "babel-plugin-styled-components",
 
     // Transform async imports into something Jest environment understands.
     ...(env === "test" ? ["babel-plugin-dynamic-import-node"] : []),
-  ],
+],
 };

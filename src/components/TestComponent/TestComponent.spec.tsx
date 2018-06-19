@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 import { ThemeProvider } from "display";
-import BoilerplateTestComponent from "./BoilerplateTestComponent";
+import TestComponent from "./TestComponent";
 
 const createRenderer = () =>
   renderer.create(
     <ThemeProvider>
-      <BoilerplateTestComponent />
+      <TestComponent />
     </ThemeProvider>,
   );
 
@@ -26,4 +26,27 @@ it("renders loads subcomponent asynchronously", done => {
       done();
     }, 1000);
   }, 100);
+
+});
+
+
+function doubleSay (str:string) :string {
+    return str + ", " + str;
+}
+function capitalize (str:string):string {
+    return str[0].toUpperCase() + str.substring(1);
+}
+function exclaim (str:string):string {
+    return str + '!';
+}
+/*  let result:string = exclaim(capitalize(doubleSay("hello")));
+    result //=> "Hello, hello!"*/
+
+it("understands pipe operator", () => {
+    const test:string = "hello"
+        |> doubleSay
+        |> capitalize
+        |> exclaim;
+
+    expect(test).toEqual("Hello, hello!");
 });

@@ -232,4 +232,11 @@ const uglifyJsConfig = {
   sourceMap: true,
 };
 
+/*const noProUglifyJsPlugin: webpack.optimize.UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin(uglifyJsConfig);
+const proUglifyJsPlugin: webpack.optimize.UglifyJsPlugin = new HtmlPlugin({
+    filename: path.resolve(__dirname, "dist/index.html"),
+    template: path.resolve(__dirname, "public/index.demo.html"),
+    inject: false,
+});*/
+
 export default createConfig;

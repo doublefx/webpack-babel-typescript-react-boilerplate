@@ -1,10 +1,10 @@
 import * as React from "react";
 import { ThemeProvider } from "display";
-import BoilerplateTestComponent from "components/BoilerplateTestComponent";
+import TestComponent from "components/TestComponent";
 
 const App = () => (
   <ThemeProvider>
-    <BoilerplateTestComponent />
+    <TestComponent />
   </ThemeProvider>
 );
 

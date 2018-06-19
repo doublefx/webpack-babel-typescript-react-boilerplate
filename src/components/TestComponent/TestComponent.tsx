@@ -6,7 +6,7 @@ import * as largeImage from "./assets/pexels-photo-270348.jpeg";
 
 // Making sure withProps is available (correct package aliasing).
 export const SecondsCounterText = withProps<{ bold: boolean }>()(styled.span)`
-  color: ${props => props.theme.boilerplateTestComponentColor};
+  color: ${props => props.theme.testComponentColor};
   font-weight: ${props => (props.bold ? "600" : "400")};
 
   ${props => props.theme.media.min.tablet`
@@ -14,7 +14,7 @@ export const SecondsCounterText = withProps<{ bold: boolean }>()(styled.span)`
   `}
 `;
 
-class BoilerplateTestComponent extends React.Component {
+class TestComponent extends React.Component {
   state = { elapsed: 0, ComponentTitle: null as React.ComponentType | null };
 
   private interval: number;
@@ -66,4 +66,4 @@ class BoilerplateTestComponent extends React.Component {
   }
 }
 
-export default BoilerplateTestComponent;
+export default TestComponent;
